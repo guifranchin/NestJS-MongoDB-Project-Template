@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PlayersModule } from './players/players.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
@@ -8,6 +9,7 @@ import { PlayersModule } from './players/players.module';
       'mongodb+srv://guifranchin:guifranchin@cluster0.kifk2ro.mongodb.net/?retryWrites=true&w=majority',
     ),
     PlayersModule,
+    CategoriesModule,
   ],
   controllers: [],
   providers: [],
