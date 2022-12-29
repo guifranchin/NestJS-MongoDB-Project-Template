@@ -82,4 +82,20 @@ export class CategoriesService {
     }
     return categoryExist;
   }
+
+  async consultPlayerCategory(playerId: any): Promise<Category> {
+    const players = await this.playersService.getAllPlayers();
+
+    const playerFilter = players.filter((player) => player._id == playerId);
+
+    if (playerFilter.length == 0) {
+      throw new BadRequestException(`O id ${playerId} não é um jogador!`);
+    }
+
+    return await this.categoryModel
+      .findOne()
+      .where('players')
+      .in(playerId)
+      .exec();
+  }
 }
