@@ -29,8 +29,8 @@ npm run start:dev
 ```
 
 ### Built With
-## NestJS - A progressive Node.js framework for building efficient and scalable server-side applications.
-## MongoDB - A NoSQL document-oriented database.
+ NestJS - A progressive Node.js framework for building efficient and scalable server-side applications.
+ MongoDB - A NoSQL document-oriented database.
 
 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
